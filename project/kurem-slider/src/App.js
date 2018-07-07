@@ -28,9 +28,10 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <SayFullName name="Илья" surname="Муромец" link="http://vk.com" />
-        <SayFullName name="Добрыня" surname="Никитич" link="http://facebook.com" />
-        <SayFullName name="Алексей" surname="Попович" link="http://twitter.com" />       
+        <h1> Привет мир! </h1>
+        <SayFullName name="Илья" surname="Муромец" link="vk.com" />
+        <SayFullName name="Добрыня" surname="Никитич" link="facebook.com" />
+        <SayFullName name="Алексей" surname="Попович" link="twitter.com" />       
       </div>
     );
   }
@@ -39,8 +40,8 @@ class App extends Component {
 function SayFullName(props) {
   return (
       <div>
-        <h1> Имя: {props.name}, Фамилия: {props.surname} </h1>
-        <a href={props.link} target="_blank"> Link zu meinem Profil </a>
+        <h2> Имя: {props.name}, Фамилия: {props.surname} </h2>
+        <a href={"http://" + props.link} target="_blank"> Link zu meinem {props.link} </a>
       </div>  
     )
 } 
